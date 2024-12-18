@@ -1,12 +1,62 @@
 
-/* 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
 
-*/
+.page {
+    width: 38vw;
+    border: 1px solid black;
+    padding:10px;}
+
+
+.title {
+    font-family: "Caveat Brush", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4vw;
+    text-align: center;
+    color: rgb(81, 153, 235);
+}
+
+.list-items{
+    font-family: "Comic Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2vw;
+    color: rgb(178, 175, 175);
+}
+
+.delete {
+    color: rgb(178, 175, 175);
+    font-size: 2vw;
+    margin-top: 5px;
+    display: none;
+}
+
+.delete-show {
+    display:block;
+}
+
+.input-bar {
+
+    font-family: "Comic Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2vw;
+    color: rgb(178, 175, 175);
+    border:none;
+    border-bottom: 1pt solid;
+    border-radius: 0;
+}
+
+.task-counter {
+    font-family: "Comic Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    color: rgb(178, 175, 175);
+}
