@@ -37,7 +37,7 @@ const ToDoPage = () => {
                         return (
                             <li className="list-group-item align-middle d-flex justify-content-start" key={item.id} onMouseEnter={() => {
                                 setHover(item.id)
-                            }} onMouseLeave={() => { setHover(null) }}><input class="form-check-input me-5" type="checkbox" value="" id="flexCheckDefault" /><div className="task">{item.text}</div> <FontAwesomeIcon icon={faTrash} className={`delete ${hover === item.id ? 'delete-show' : ''}`} onClick={() => handleDelete(item.id)} /></li>
+                            }} onMouseLeave={() => { setHover(null) }}><input className="form-check-input me-5" type="checkbox" value="" id="flexCheckDefault" /><div className="task">{item.text}</div> <FontAwesomeIcon icon={faTrash} className={`delete ${hover === item.id ? 'delete-show' : ''}`} onClick={() => handleDelete(item.id)} /></li>
                         )
                     })}
                 </ul>
