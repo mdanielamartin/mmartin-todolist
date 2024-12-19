@@ -8,16 +8,17 @@ body{
 
 
 .page {
-    width: 38vw;
+    width: 50vw;
     border: 1px solid black;
     padding:10px;}
 
 
 .title {
+    position:relative ;
     font-family: "Caveat Brush", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 4vw;
+    font-size: 65px;
     text-align: center;
     color: rgb(81, 153, 235);
 }
@@ -26,19 +27,26 @@ body{
     font-family: "Comic Neue", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 2vw;
+    font-size: 30px;
     color: rgb(178, 175, 175);
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
 }
 
 .delete {
-    color: rgb(178, 175, 175);
-    font-size: 2vw;
+    color:rgb(81, 153, 235);
+    margin-right: 10px;
+    margin-left: auto;
+    float: right;
+    font-size: 30px;
     margin-top: 5px;
     display: none;
 }
 
 .delete-show {
     display:block;
+    cursor: pointer;
 }
 
 .input-bar {
@@ -46,7 +54,7 @@ body{
     font-family: "Comic Neue", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 2vw;
+    font-size: 30px;
     color: rgb(178, 175, 175);
     border:none;
     border-bottom: 1pt solid;
@@ -57,6 +65,10 @@ body{
     font-family: "Comic Neue", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1vw;
+    font-size: 15px;
     color: rgb(178, 175, 175);
+}
+
+.form-check-input{
+    color:rgb(81, 153, 235); ;
 }

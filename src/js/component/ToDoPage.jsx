@@ -8,28 +8,36 @@ const ToDoPage = () => {
 
     const [list, setList] = useState([]);
     const [task, setTask] = useState('');
-    const [hover, setHover] = useState(false);
+    const [id, setId] = useState(0);
+    const [hover, setHover] = useState(null);
 
+    const genId = () => {
+        setId(prev => prev + 1)
+        return ((id).toString())
+    }
     const addTask = (event) => {
         if (event.key === 'Enter') {
-            setList([task, ...list]);
+            const taskAdded = { 'text': event.target.value, 'id': genId() }
+            setList([...list, taskAdded]);
             setTask('');
-            console.log(list)
         }
     }
 
+    const handleDelete = (itemID) => {
+        setList(prev => prev.filter(item => item.id !== itemID))
+    }
 
     return (
         <div className="page">
             <h1 className="title">To Do List</h1>
-            <input class="form-control py-3 input-bar b-0 my-4" type="text" placeholder="Type your next task..." value={task} onKeyDown={addTask} onChange={(e) => { setTask(e.target.value) }} />
+            <input className="form-control py-3 input-bar b-0 my-4" type="text" placeholder="Type your next task..." value={task} onKeyDown={addTask} onChange={(e) => { setTask(e.target.value) }} />
             <div className="task-list">
-                <ul class="list-group list-group-flush list-items">
-
+                <ul className="list-group list-group-flush list-items">
                     {list.map((item, index) => {
-
                         return (
-                            <li className="list-group-item align-middle d-flex justify-content-between" key={index} onMouseEnter={() => { setHover(true) }} onMouseLeave={() => { setHover(false) }}><div className="task">{item}</div> <FontAwesomeIcon icon={faTrash} className={`delete ${hover ? 'delete-show' : ''}`} /></li>
+                            <li className="list-group-item align-middle d-flex justify-content-start" key={item.id} onMouseEnter={() => {
+                                setHover(item.id)
+                            }} onMouseLeave={() => { setHover(null) }}><input class="form-check-input me-5" type="checkbox" value="" id="flexCheckDefault" /><div className="task">{item.text}</div> <FontAwesomeIcon icon={faTrash} className={`delete ${hover === item.id ? 'delete-show' : ''}`} onClick={() => handleDelete(item.id)} /></li>
                         )
                     })}
                 </ul>
