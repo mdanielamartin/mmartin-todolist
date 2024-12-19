@@ -4,13 +4,15 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 10vh;
+    background-color: rgba(250, 245, 245, 0.836);
 }
 
 
 .page {
     width: 50vw;
     border: 1px solid black;
-    padding:10px;}
+    padding:10px;
+background-color: white;}
 
 
 .title {
