@@ -36,6 +36,11 @@ background-color: white;}
     white-space: normal;
 }
 
+.task-done{
+    text-decoration: line-through;
+    text-decoration-color: rgb(81, 153, 235);
+}
+
 .delete {
     color:rgb(81, 153, 235);
     margin-right: 10px;
